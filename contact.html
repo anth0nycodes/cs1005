@@ -3,8 +3,336 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pre-order breads, pastries, and cakes from North Star Bakery, or send us a question. Find our location and hours."
+    />
     <title>North Star Bakery | Contact</title>
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-  <body></body>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="site-logo" href="index.html">
+        <img
+          src="assets/images/bakery-logo_c.png"
+          alt="North Star Bakery home"
+          width="64"
+          height="55"
+        />
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="button" href="contact.html">Preorder</a>
+    </header>
+
+    <main id="main">
+      <div class="contact-layout">
+        <section class="contact-info" aria-labelledby="contact-heading">
+          <header class="section-header">
+            <h1 id="contact-heading">Let’s get in touch</h1>
+            <p>
+              Looking to preorder or have a question? We’d love to hear from
+              you! Send us a message, and we’ll get back to you soon.
+            </p>
+          </header>
+
+          <h2>Location</h2>
+          <address>
+            <ul class="contact-list">
+              <li>
+                <img
+                  src="assets/svgs/icons/phone.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <a href="tel:+11234567890">123-456-7890</a>
+              </li>
+              <li>
+                <img
+                  src="assets/svgs/icons/envelope.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <a href="mailto:northstarbakery@gmail.com"
+                  >northstarbakery@gmail.com</a
+                >
+              </li>
+              <li>
+                <img
+                  src="assets/svgs/icons/location-dot.svg"
+                  alt=""
+                  width="15"
+                  height="20"
+                />
+                <span>742 Evergreen Terrace,<br />Springfield, OR 97477</span>
+              </li>
+            </ul>
+          </address>
+
+          <h2>Hours of operation</h2>
+          <div class="hours">
+            <img
+              src="assets/svgs/icons/calendar-days.svg"
+              alt=""
+              width="18"
+              height="20"
+            />
+            <ul>
+              <li>Monday–Friday: 6 a.m. to 8 p.m.</li>
+              <li>Saturday: 8 a.m. to 6 p.m.</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+        </section>
+
+        <form class="contact-form" action="#" method="get">
+          <fieldset>
+            <legend>Your information</legend>
+
+            <label for="full-name"
+              >Full Name <abbr title="required">*</abbr></label
+            >
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              placeholder="John Smith"
+              autocomplete="name"
+              minlength="2"
+              maxlength="80"
+              required
+            />
+
+            <label for="email">Email <abbr title="required">*</abbr></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="johnsmith@gmail.com"
+              autocomplete="email"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Request details</legend>
+
+            <label for="request-type"
+              >Request Type <abbr title="required">*</abbr></label
+            >
+            <select id="request-type" name="request-type" required>
+              <option value="">Choose a request type</option>
+              <option value="pre-order">Pre-order</option>
+              <option value="custom-cake">Custom cake or event order</option>
+              <option value="catering">Catering inquiry</option>
+              <option value="general-question">General question</option>
+            </select>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="pickup-date"
+                  >Pickup Date <abbr title="required">*</abbr></label
+                >
+                <input
+                  type="date"
+                  id="pickup-date"
+                  name="pickup-date"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="pickup-time"
+                  >Pickup Time <abbr title="required">*</abbr></label
+                >
+                <input
+                  type="time"
+                  id="pickup-time"
+                  name="pickup-time"
+                  min="06:00"
+                  max="20:00"
+                  step="900"
+                  required
+                />
+              </div>
+            </div>
+
+            <label for="allergy-notes">Allergy Notes (optional)</label>
+            <input
+              type="text"
+              id="allergy-notes"
+              name="allergy-notes"
+              placeholder="e.g., Peanuts, soy, etc."
+              maxlength="200"
+            />
+
+            <label for="item-details"
+              >Item Details / Message <abbr title="required">*</abbr></label
+            >
+            <textarea
+              id="item-details"
+              name="item-details"
+              rows="7"
+              placeholder="I want to pre-order..."
+              minlength="10"
+              maxlength="1000"
+              required
+            ></textarea>
+          </fieldset>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <section class="newsletter" aria-labelledby="newsletter-heading">
+        <header class="section-header">
+          <h2 id="newsletter-heading">From Our Kitchen to Your Inbox</h2>
+          <p>
+            Stay in the loop with us! Subscribe to our newsletter for updates on
+            store news, fresh-baked goods, seasonal specials, and what’s
+            happening in our bakery.
+          </p>
+        </header>
+        <form class="newsletter-form" action="#" method="get">
+          <label for="newsletter-email">Email address</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            placeholder="Enter your email here..."
+            autocomplete="email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img
+          src="assets/images/bakery-logo_c.png"
+          alt="North Star Bakery logo"
+          width="96"
+          height="82"
+        />
+        <p>
+          Freshly made in the neighborhood. Homemade comfort for everyday
+          moments and big celebrations.
+        </p>
+        <ul class="social-links">
+          <li>
+            <a href="#"
+              ><img
+                src="assets/svgs/icons/square-instagram.svg"
+                alt="Instagram"
+                width="28"
+                height="32"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="assets/svgs/icons/square-facebook.svg"
+                alt="Facebook"
+                width="28"
+                height="32"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="assets/svgs/icons/youtube.svg"
+                alt="YouTube"
+                width="36"
+                height="32"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <section class="footer-contact" aria-labelledby="footer-contact-heading">
+        <h2 id="footer-contact-heading">Get in touch</h2>
+        <address>
+          <ul class="contact-list">
+            <li>
+              <img
+                src="assets/svgs/icons/phone.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <a href="tel:+11234567890">123-456-7890</a>
+            </li>
+            <li>
+              <img
+                src="assets/svgs/icons/envelope.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <a href="mailto:northstarbakery@gmail.com"
+                >northstarbakery@gmail.com</a
+              >
+            </li>
+            <li>
+              <img
+                src="assets/svgs/icons/location-dot.svg"
+                alt=""
+                width="15"
+                height="20"
+              />
+              <span>742 Evergreen Terrace,<br />Springfield, OR 97477</span>
+            </li>
+          </ul>
+        </address>
+        <div class="hours">
+          <img
+            src="assets/svgs/icons/calendar-days.svg"
+            alt=""
+            width="18"
+            height="20"
+          />
+          <ul>
+            <li>Monday–Friday: 6 a.m. to 8 p.m.</li>
+            <li>Saturday: 8 a.m. to 6 p.m.</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </section>
+
+      <nav class="footer-nav" aria-labelledby="footer-links-heading">
+        <h2 id="footer-links-heading">Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-labelledby="footer-info-heading">
+        <h2 id="footer-info-heading">Information</h2>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+        <p>Made with love and a lot of flour!</p>
+      </div>
+    </footer>
+  </body>
 </html>

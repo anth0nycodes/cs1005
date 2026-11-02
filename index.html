@@ -3,8 +3,271 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="North Star Bakery is a neighborhood bakery in Springfield, OR serving fresh breads, pastries, and cakes. Pre-order online and pay at pickup."
+    />
     <title>North Star Bakery | Home</title>
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-  <body></body>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="site-logo" href="index.html">
+        <img
+          src="assets/images/bakery-logo_c.png"
+          alt="North Star Bakery home"
+          width="64"
+          height="55"
+        />
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="button" href="contact.html">Preorder</a>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/bakery-feature-large_c.png"
+            width="1200"
+            height="600"
+          />
+          <img
+            src="assets/images/bakery-feature-small_c.png"
+            alt="Trays of freshly baked cookies and pastries in the North Star Bakery display case"
+            width="1200"
+            height="1200"
+          />
+        </picture>
+        <div class="hero-content">
+          <h1>Welcome to North Star Bakery</h1>
+          <p>
+            Freshly baked favorites, made with care and shared with the
+            neighborhood. Find something you love and make it part of your day.
+          </p>
+          <a class="button" href="contact.html">Preorder Now – Pay Later</a>
+          <p class="hero-note">
+            No checkout required. Pay in person at pickup.
+          </p>
+        </div>
+      </section>
+
+      <section class="known-for" aria-labelledby="known-for-heading">
+        <header class="section-header">
+          <h2 id="known-for-heading">Baked With Love</h2>
+          <p>
+            From fresh-baked breads to sweet pastries, discover the everyday
+            favorites and special treats that make North Star Bakery a
+            neighborhood staple.
+          </p>
+        </header>
+        <div class="split">
+          <img
+            src="assets/images/bakery-bread_c.png"
+            alt="Crusty sourdough and country loaves stacked in a glass bakery case"
+            width="1200"
+            height="1200"
+          />
+          <div class="split-content">
+            <h3>The proof is in the pastry</h3>
+            <p>
+              At North Star Bakery, we believe good baked goods have a place in
+              life’s everyday moments and special celebrations. We’re here to
+              bring the neighborhood together with a welcoming selection of
+              breads, pastries, and treats to share.
+            </p>
+            <a class="button" href="about.html">Learn more</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured" aria-labelledby="featured-heading">
+        <header class="section-header">
+          <img
+            class="badge"
+            src="assets/svgs/badge.svg"
+            alt="#1 Baked Good of the Week"
+            width="186"
+            height="70"
+          />
+          <h2 id="featured-heading">Fresh from our ovens</h2>
+          <p>Pre-order now and pick it up fresh this weekend!</p>
+        </header>
+        <div class="split">
+          <div class="split-content">
+            <h3>Rustic Sourdough</h3>
+            <p>
+              A rustic loaf with a beautifully textured crust and a hearty,
+              homemade feel. Bring one home to enjoy with your favorite meals or
+              share around the table.
+            </p>
+            <a class="button" href="products.html">View all products</a>
+          </div>
+          <figure>
+            <img
+              src="assets/images/bakery-signature-loaf_c.png"
+              alt="A round, flour-dusted Rustic Sourdough loaf resting on a checkered linen towel"
+              width="1200"
+              height="1200"
+            />
+            <figcaption>
+              Fun fact: our Signature Loaf rises slowly for 24 hours before it
+              ever meets the oven.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="newsletter" aria-labelledby="newsletter-heading">
+        <header class="section-header">
+          <h2 id="newsletter-heading">From Our Kitchen to Your Inbox</h2>
+          <p>
+            Stay in the loop with us! Subscribe to our newsletter for updates on
+            store news, fresh-baked goods, seasonal specials, and what’s happening
+            in our bakery.
+          </p>
+        </header>
+        <form class="newsletter-form" action="#" method="get">
+          <label for="newsletter-email">Email address</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            placeholder="Enter your email here..."
+            autocomplete="email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img
+          src="assets/images/bakery-logo_c.png"
+          alt="North Star Bakery logo"
+          width="96"
+          height="82"
+        />
+        <p>
+          Freshly made in the neighborhood. Homemade comfort for everyday
+          moments and big celebrations.
+        </p>
+        <ul class="social-links">
+          <li>
+            <a href="#"
+              ><img
+                src="assets/svgs/icons/square-instagram.svg"
+                alt="Instagram"
+                width="28"
+                height="32"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="assets/svgs/icons/square-facebook.svg"
+                alt="Facebook"
+                width="28"
+                height="32"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="assets/svgs/icons/youtube.svg"
+                alt="YouTube"
+                width="36"
+                height="32"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <section class="footer-contact" aria-labelledby="footer-contact-heading">
+        <h2 id="footer-contact-heading">Get in touch</h2>
+        <address>
+          <ul class="contact-list">
+            <li>
+              <img
+                src="assets/svgs/icons/phone.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <a href="tel:+11234567890">123-456-7890</a>
+            </li>
+            <li>
+              <img
+                src="assets/svgs/icons/envelope.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <a href="mailto:northstarbakery@gmail.com"
+                >northstarbakery@gmail.com</a
+              >
+            </li>
+            <li>
+              <img
+                src="assets/svgs/icons/location-dot.svg"
+                alt=""
+                width="15"
+                height="20"
+              />
+              <span>742 Evergreen Terrace,<br />Springfield, OR 97477</span>
+            </li>
+          </ul>
+        </address>
+        <div class="hours">
+          <img
+            src="assets/svgs/icons/calendar-days.svg"
+            alt=""
+            width="18"
+            height="20"
+          />
+          <ul>
+            <li>Monday–Friday: 6 a.m. to 8 p.m.</li>
+            <li>Saturday: 8 a.m. to 6 p.m.</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </section>
+
+      <nav class="footer-nav" aria-labelledby="footer-links-heading">
+        <h2 id="footer-links-heading">Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-labelledby="footer-info-heading">
+        <h2 id="footer-info-heading">Information</h2>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+        <p>Made with love and a lot of flour!</p>
+      </div>
+    </footer>
+  </body>
 </html>

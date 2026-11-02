@@ -3,8 +3,390 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meet the bakers behind North Star Bakery, learn our story, and see how we source local ingredients for everything we bake."
+    />
     <title>North Star Bakery | About</title>
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-  <body></body>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="site-logo" href="index.html">
+        <img
+          src="assets/images/bakery-logo_c.png"
+          alt="North Star Bakery home"
+          width="64"
+          height="55"
+        />
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="button" href="contact.html">Preorder</a>
+    </header>
+
+    <main id="main">
+      <section class="page-banner">
+        <img
+          src="assets/svgs/about-icons.svg"
+          alt=""
+          width="365"
+          height="137"
+        />
+        <h1>About us</h1>
+      </section>
+
+      <section class="story" aria-labelledby="story-heading">
+        <div class="split">
+          <div class="split-content">
+            <h2 id="story-heading">Our story</h2>
+            <p>
+              North Star Bakery started with a simple idea: a neighborhood
+              should have a place that smells like fresh bread at 6 a.m. What
+              began as weekend loaves for friends and neighbors grew into the
+              little shop on the corner you know today.
+            </p>
+            <p>
+              Every morning, our ovens are warm before the sun is up. We mix,
+              shape, and bake everything by hand in small batches, from crusty
+              sourdough to flaky croissants and cinnamon rolls that are to die
+              for! We’d rather bake a little less and get it right than cut
+              corners to make more. That’s how it’s always been, and how it’s
+              going to stay.
+            </p>
+            <p>
+              Over the years, we’ve become part of your mornings, your family
+              brunches, and your biggest days. We’ve baked birthday cakes,
+              office breakfast spreads, and wedding dessert tables. Whether
+              you’re grabbing a coffee and a scone on your commute or planning a
+              celebration for a hundred, we’d love to bake for you.
+              <a href="contact.html">Pre-order online</a> or stop by and say
+              hello.
+            </p>
+          </div>
+          <img
+            src="assets/images/bakery-storefront_c.png"
+            alt="The North Star Bakery storefront window, with shelves of croissants, loaves, and pastries on display"
+            width="1200"
+            height="715"
+          />
+        </div>
+      </section>
+
+      <section class="behind-scenes" aria-labelledby="behind-scenes-heading">
+        <header class="section-header">
+          <h2 id="behind-scenes-heading">Behind the scenes</h2>
+          <p>
+            Ever wondered what happens before we open the doors? Take a peek
+            inside our kitchen.
+          </p>
+        </header>
+        <video controls preload="metadata" width="960">
+          <source
+            src="assets/videos/bakery-behind-scenes_c.mp4"
+            type="video/mp4"
+          />
+          <p>
+            Your browser doesn’t support embedded video.
+            <a href="assets/videos/bakery-behind-scenes_c.mp4">
+              Download the behind-the-scenes video
+            </a>
+            instead.
+          </p>
+        </video>
+      </section>
+
+      <section class="craft" aria-labelledby="craft-heading">
+        <h2 id="craft-heading">Honoring the Craft</h2>
+        <ol class="craft-list">
+          <li>
+            <img
+              src="assets/svgs/wheat-and-house.svg"
+              alt=""
+              width="152"
+              height="135"
+            />
+            <h3>Local Farms</h3>
+            <p>
+              Our flour, fruit, and eggs come from farms just a short drive
+              away. Buying close to home means fresher ingredients for you and
+              steady support for the growers who make our neighborhood what it
+              is.
+            </p>
+          </li>
+          <li>
+            <img
+              src="assets/svgs/milk-bottle.svg"
+              alt=""
+              width="134"
+              height="134"
+            />
+            <h3>Natural Dairy</h3>
+            <p>
+              We use real butter and whole milk from a regional dairy we’ve
+              worked with for years. No shortcuts, no substitutes. It’s the
+              reason our croissants shatter just right and our cakes stay rich
+              and tender.
+            </p>
+          </li>
+          <li>
+            <img
+              src="assets/svgs/bread-and-cookies.svg"
+              alt=""
+              width="144"
+              height="144"
+            />
+            <h3>Delivering fresh baked goods</h3>
+            <p>
+              Everything on our shelves is baked the same day. Pre-order online
+              and we’ll have your order ready and waiting at the counter the
+              moment you arrive! Swing by, pick it up, and you’re on your way.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="team" aria-labelledby="team-heading">
+        <header class="section-header">
+          <h2 id="team-heading">Meet our team</h2>
+          <p>
+            The people behind the ovens, the counter, and every order that leaves
+            our door. We’re bakers, neighbors, and a little obsessed with getting
+            it right.
+          </p>
+        </header>
+        <ul class="team-grid">
+          <li>
+            <img
+              src="https://placehold.co/600x600/F0E1D6/684637?text=Elena+Marsh"
+              alt="Placeholder photo of Elena Marsh"
+              width="600"
+              height="600"
+            />
+            <h3>Elena Marsh</h3>
+            <p>Founder &amp; Head Baker</p>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/600x600/F0E1D6/684637?text=David+Okafor"
+              alt="Placeholder photo of David Okafor"
+              width="600"
+              height="600"
+            />
+            <h3>David Okafor</h3>
+            <p>Pastry Chef</p>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/600x600/F0E1D6/684637?text=Rosa+Delgado"
+              alt="Placeholder photo of Rosa Delgado"
+              width="600"
+              height="600"
+            />
+            <h3>Rosa Delgado</h3>
+            <p>Bread Baker</p>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/600x600/F0E1D6/684637?text=Sam+Whitley"
+              alt="Placeholder photo of Sam Whitley"
+              width="600"
+              height="600"
+            />
+            <h3>Sam Whitley</h3>
+            <p>Cake Designer</p>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/600x600/F0E1D6/684637?text=Priya+Raman"
+              alt="Placeholder photo of Priya Raman"
+              width="600"
+              height="600"
+            />
+            <h3>Priya Raman</h3>
+            <p>Events &amp; Pre-order Coordinator</p>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/600x600/F0E1D6/684637?text=Marcus+Lee"
+              alt="Placeholder photo of Marcus Lee"
+              width="600"
+              height="600"
+            />
+            <h3>Marcus Lee</h3>
+            <p>Morning Baker</p>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/600x600/F0E1D6/684637?text=Hannah+Brooks"
+              alt="Placeholder photo of Hannah Brooks"
+              width="600"
+              height="600"
+            />
+            <h3>Hannah Brooks</h3>
+            <p>Front of House Lead</p>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/600x600/F0E1D6/684637?text=Theo+Grant"
+              alt="Placeholder photo of Theo Grant"
+              width="600"
+              height="600"
+            />
+            <h3>Theo Grant</h3>
+            <p>Counter Team</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="newsletter" aria-labelledby="newsletter-heading">
+        <header class="section-header">
+          <h2 id="newsletter-heading">From Our Kitchen to Your Inbox</h2>
+          <p>
+            Stay in the loop with us! Subscribe to our newsletter for updates on
+            store news, fresh-baked goods, seasonal specials, and what’s happening
+            in our bakery.
+          </p>
+        </header>
+        <form class="newsletter-form" action="#" method="get">
+          <label for="newsletter-email">Email address</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            placeholder="Enter your email here..."
+            autocomplete="email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img
+          src="assets/images/bakery-logo_c.png"
+          alt="North Star Bakery logo"
+          width="96"
+          height="82"
+        />
+        <p>
+          Freshly made in the neighborhood. Homemade comfort for everyday
+          moments and big celebrations.
+        </p>
+        <ul class="social-links">
+          <li>
+            <a href="#"
+              ><img
+                src="assets/svgs/icons/square-instagram.svg"
+                alt="Instagram"
+                width="28"
+                height="32"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="assets/svgs/icons/square-facebook.svg"
+                alt="Facebook"
+                width="28"
+                height="32"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="assets/svgs/icons/youtube.svg"
+                alt="YouTube"
+                width="36"
+                height="32"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <section class="footer-contact" aria-labelledby="footer-contact-heading">
+        <h2 id="footer-contact-heading">Get in touch</h2>
+        <address>
+          <ul class="contact-list">
+            <li>
+              <img
+                src="assets/svgs/icons/phone.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <a href="tel:+11234567890">123-456-7890</a>
+            </li>
+            <li>
+              <img
+                src="assets/svgs/icons/envelope.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <a href="mailto:northstarbakery@gmail.com"
+                >northstarbakery@gmail.com</a
+              >
+            </li>
+            <li>
+              <img
+                src="assets/svgs/icons/location-dot.svg"
+                alt=""
+                width="15"
+                height="20"
+              />
+              <span>742 Evergreen Terrace,<br />Springfield, OR 97477</span>
+            </li>
+          </ul>
+        </address>
+        <div class="hours">
+          <img
+            src="assets/svgs/icons/calendar-days.svg"
+            alt=""
+            width="18"
+            height="20"
+          />
+          <ul>
+            <li>Monday–Friday: 6 a.m. to 8 p.m.</li>
+            <li>Saturday: 8 a.m. to 6 p.m.</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </section>
+
+      <nav class="footer-nav" aria-labelledby="footer-links-heading">
+        <h2 id="footer-links-heading">Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-labelledby="footer-info-heading">
+        <h2 id="footer-info-heading">Information</h2>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+        <p>Made with love and a lot of flour!</p>
+      </div>
+    </footer>
+  </body>
 </html>
