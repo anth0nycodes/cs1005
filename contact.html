@@ -9,6 +9,7 @@
     />
     <title>North Star Bakery | Contact</title>
     <link rel="stylesheet" href="styles/index.css" />
+    <script src="scripts/contact.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -144,43 +145,48 @@
               </select>
             </div>
 
-            <div class="form-row">
-              <div class="form-field">
-                <label for="pickup-date"
-                  >Pickup Date <abbr title="required">*</abbr></label
-                >
-                <input
-                  type="date"
-                  id="pickup-date"
-                  name="pickup-date"
-                  required
-                />
-              </div>
-              <div class="form-field">
-                <label for="pickup-time"
-                  >Pickup Time <abbr title="required">*</abbr></label
-                >
-                <input
-                  type="time"
-                  id="pickup-time"
-                  name="pickup-time"
-                  min="06:00"
-                  max="20:00"
-                  required
-                />
-              </div>
-            </div>
+            <!-- Hidden by scripts/contact.js for general questions -->
+            <fieldset id="order-details">
+              <legend class="sr-only">Pickup details</legend>
 
-            <div class="form-field">
-              <label for="allergy-notes">Allergy Notes (optional)</label>
-              <input
-                type="text"
-                id="allergy-notes"
-                name="allergy-notes"
-                placeholder="e.g., Peanuts, soy, etc."
-                maxlength="200"
-              />
-            </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="pickup-date"
+                    >Pickup Date <abbr title="required">*</abbr></label
+                  >
+                  <input
+                    type="date"
+                    id="pickup-date"
+                    name="pickup-date"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="pickup-time"
+                    >Pickup Time <abbr title="required">*</abbr></label
+                  >
+                  <input
+                    type="time"
+                    id="pickup-time"
+                    name="pickup-time"
+                    min="06:00"
+                    max="20:00"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="allergy-notes">Allergy Notes (optional)</label>
+                <input
+                  type="text"
+                  id="allergy-notes"
+                  name="allergy-notes"
+                  placeholder="e.g., Peanuts, soy, etc."
+                  maxlength="200"
+                />
+              </div>
+            </fieldset>
 
             <div class="form-field">
               <label for="item-details"
@@ -190,7 +196,7 @@
                 id="item-details"
                 name="item-details"
                 rows="7"
-                placeholder="I want to pre-order..."
+                placeholder="Tell us what you’d like to order, or ask us anything..."
                 minlength="10"
                 maxlength="1000"
                 required
@@ -199,6 +205,7 @@
           </fieldset>
 
           <button type="submit" class="button typography-button">Submit</button>
+          <p id="form-status" class="form-status" role="status"></p>
         </form>
       </div>
 

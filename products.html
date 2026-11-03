@@ -9,6 +9,8 @@
     />
     <title>North Star Bakery | Products</title>
     <link rel="stylesheet" href="styles/index.css" />
+    <script src="scripts/products-data.js" defer></script>
+    <script src="scripts/products.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -140,202 +142,58 @@
 
           <div class="product-results">
             <div class="product-toolbar">
-              <label for="sort-by" class="sr-only">Sort by</label>
-              <select id="sort-by" name="sort-by">
-                <option value="best-sellers">Best Sellers</option>
-                <option value="price-low-high">Price: Low to High</option>
-                <option value="price-high-low">Price: High to Low</option>
-                <option value="name">Name: A to Z</option>
-              </select>
+              <div class="product-toolbar-controls">
+                <p id="product-count" class="product-count" role="status"></p>
+                <label for="sort-by" class="sr-only">Sort by</label>
+                <select id="sort-by" name="sort-by">
+                  <option value="best-sellers">Best Sellers</option>
+                  <option value="price-low-high">Price: Low to High</option>
+                  <option value="price-high-low">Price: High to Low</option>
+                  <option value="name">Name: A to Z</option>
+                </select>
+              </div>
+              <ul
+                id="active-filters"
+                class="active-filters"
+                aria-label="Active filters"
+                hidden
+              ></ul>
             </div>
 
-            <section class="product-category" aria-labelledby="breads-heading">
+            <!-- Product cards are rendered from scripts/products-data.js -->
+            <section
+              class="product-category"
+              data-category="breads"
+              aria-labelledby="breads-heading"
+            >
               <h3 id="breads-heading" class="typography-h3">Breads</h3>
-              <ul class="product-grid">
-                <li class="product-card">
-                  <img
-                    src="assets/images/bakery-signature-loaf_c.png"
-                    alt="A round Rustic Sourdough loaf on a linen towel"
-                    width="1200"
-                    height="1200"
-                  />
-                  <h4 class="typography-person-name">Rustic Sourdough</h4>
-                  <p class="price typography-person-name">$9 – $12</p>
-                  <p class="typography-person-role">
-                    Our signature loaf with a crackly crust and tangy, open
-                    crumb.
-                  </p>
-                </li>
-                <li class="product-card">
-                  <img
-                    src="assets/images/bakery-bread_c.png"
-                    alt="Flour-dusted country loaves in a bakery case"
-                    width="1200"
-                    height="1200"
-                  />
-                  <h4 class="typography-person-name">Country White</h4>
-                  <p class="price typography-person-name">$7 – $9</p>
-                  <p class="typography-person-role">
-                    A soft, everyday loaf made for sandwiches and toast.
-                  </p>
-                </li>
-                <li class="product-card">
-                  <img
-                    src="https://placehold.co/600x600/F0E1D6/684637?text=Seeded+Multigrain"
-                    alt="Placeholder photo of a seeded multigrain loaf"
-                    width="600"
-                    height="600"
-                  />
-                  <h4 class="typography-person-name">Seeded Multigrain</h4>
-                  <p class="price typography-person-name">$8 – $10</p>
-                  <p class="typography-person-role">
-                    Packed with oats, flax, and sunflower seeds for a hearty
-                    bite.
-                  </p>
-                </li>
-                <li class="product-card">
-                  <img
-                    src="https://placehold.co/600x600/F0E1D6/684637?text=Rosemary+Focaccia"
-                    alt="Placeholder photo of rosemary focaccia"
-                    width="600"
-                    height="600"
-                  />
-                  <h4 class="typography-person-name">Rosemary Focaccia</h4>
-                  <p class="price typography-person-name">$6 – $10</p>
-                  <p class="typography-person-role">
-                    Olive oil–rich and dimpled, topped with fresh rosemary and
-                    sea salt.
-                  </p>
-                </li>
-              </ul>
+              <ul class="product-grid"></ul>
             </section>
 
             <section
               class="product-category"
+              data-category="pastries"
               aria-labelledby="pastries-heading"
             >
               <h3 id="pastries-heading" class="typography-h3">Pastries</h3>
-              <ul class="product-grid">
-                <li class="product-card">
-                  <img
-                    src="https://placehold.co/600x600/F0E1D6/684637?text=Butter+Croissant"
-                    alt="Placeholder photo of a butter croissant"
-                    width="600"
-                    height="600"
-                  />
-                  <h4 class="typography-person-name">Butter Croissant</h4>
-                  <p class="price typography-person-name">$4 – $5</p>
-                  <p class="typography-person-role">
-                    Flaky, golden layers made with real butter from a local
-                    dairy.
-                  </p>
-                </li>
-                <li class="product-card">
-                  <img
-                    src="https://placehold.co/600x600/F0E1D6/684637?text=Cinnamon+Roll"
-                    alt="Placeholder photo of a cinnamon roll"
-                    width="600"
-                    height="600"
-                  />
-                  <h4 class="typography-person-name">Cinnamon Roll</h4>
-                  <p class="price typography-person-name">$4 – $6</p>
-                  <p class="typography-person-role">
-                    Soft, swirled, and finished with a generous cream cheese
-                    glaze.
-                  </p>
-                </li>
-                <li class="product-card">
-                  <img
-                    src="https://placehold.co/600x600/F0E1D6/684637?text=Seasonal+Fruit+Danish"
-                    alt="Placeholder photo of a seasonal fruit danish"
-                    width="600"
-                    height="600"
-                  />
-                  <h4 class="typography-person-name">Seasonal Fruit Danish</h4>
-                  <p class="price typography-person-name">$5 – $6</p>
-                  <p class="typography-person-role">
-                    Buttery pastry filled with whatever fruit is fresh this
-                    week.
-                  </p>
-                </li>
-                <li class="product-card">
-                  <img
-                    src="assets/images/bakery-feature-small_c.png"
-                    alt="Rows of chocolate chip and sugar cookies in a display case"
-                    width="1200"
-                    height="1200"
-                  />
-                  <h4 class="typography-person-name">Cookie Box</h4>
-                  <p class="price typography-person-name">$12 – $24</p>
-                  <p class="typography-person-role">
-                    A half or full dozen of our chocolate chip, oatmeal, and
-                    sugar cookies.
-                  </p>
-                </li>
-              </ul>
+              <ul class="product-grid"></ul>
             </section>
 
-            <section class="product-category" aria-labelledby="cakes-heading">
+            <section
+              class="product-category"
+              data-category="cakes"
+              aria-labelledby="cakes-heading"
+            >
               <h3 id="cakes-heading" class="typography-h3">Cakes</h3>
-              <ul class="product-grid">
-                <li class="product-card">
-                  <img
-                    src="https://placehold.co/600x600/F0E1D6/684637?text=Celebration+Layer+Cake"
-                    alt="Placeholder photo of a celebration layer cake"
-                    width="600"
-                    height="600"
-                  />
-                  <h4 class="typography-person-name">Celebration Layer Cake</h4>
-                  <p class="price typography-person-name">$35 – $65</p>
-                  <p class="typography-person-role">
-                    Vanilla or chocolate layers in 6", 8", or 10" sizes for any
-                    occasion.
-                  </p>
-                </li>
-                <li class="product-card">
-                  <img
-                    src="https://placehold.co/600x600/F0E1D6/684637?text=Carrot+Cake"
-                    alt="Placeholder photo of a carrot cake"
-                    width="600"
-                    height="600"
-                  />
-                  <h4 class="typography-person-name">Carrot Cake</h4>
-                  <p class="price typography-person-name">$30 – $55</p>
-                  <p class="typography-person-role">
-                    Spiced and moist with walnuts and cream cheese frosting.
-                  </p>
-                </li>
-                <li class="product-card">
-                  <img
-                    src="https://placehold.co/600x600/F0E1D6/684637?text=Cupcakes"
-                    alt="Placeholder photo of cupcakes"
-                    width="600"
-                    height="600"
-                  />
-                  <h4 class="typography-person-name">Cupcakes</h4>
-                  <p class="price typography-person-name">$18 – $36</p>
-                  <p class="typography-person-role">
-                    Half or full dozen in rotating flavors. Great for parties
-                    and offices.
-                  </p>
-                </li>
-                <li class="product-card">
-                  <img
-                    src="https://placehold.co/600x600/F0E1D6/684637?text=Custom+Event+Cakes"
-                    alt="Placeholder photo of a custom event cake"
-                    width="600"
-                    height="600"
-                  />
-                  <h4 class="typography-person-name">Custom Event Cakes</h4>
-                  <p class="price typography-person-name">From $150</p>
-                  <p class="typography-person-role">
-                    Weddings, showers, and big celebrations.
-                    <a href="contact.html">Send us an inquiry</a> to start
-                    planning.
-                  </p>
-                </li>
-              </ul>
+              <ul class="product-grid"></ul>
             </section>
+
+            <div id="product-empty" class="product-empty" hidden>
+              <p>No products match those filters.</p>
+              <button type="button" class="button typography-button">
+                Clear all filters
+              </button>
+            </div>
           </div>
         </div>
       </section>

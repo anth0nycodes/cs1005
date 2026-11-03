@@ -36,6 +36,9 @@
   --muted: oklch(96.7% 0.001 286.4);
   --muted-foreground: oklch(53.4% 0.014 285.9);
 
+  /* Feedback */
+  --destructive: oklch(55% 0.19 27);
+
   /* Fonts */
   --font-primary: "Aleo", Georgia, serif;
   --font-secondary: "Comfortaa", system-ui, sans-serif;
@@ -186,7 +189,7 @@ abbr[title] {
 .typography-h2,
 .typography-h3,
 .typography-button,
-.typography-person-name,
+.typography-card-label,
 .typography-tag,
 .typography-legal {
   font-family: var(--font-primary);
@@ -214,7 +217,7 @@ abbr[title] {
   font-weight: 400;
 }
 
-.typography-person-name {
+.typography-card-label {
   font-size: var(--text-sm);
   font-weight: 600;
 }
@@ -230,7 +233,7 @@ abbr[title] {
 /* Secondary: Comfortaa (150% / -2.5%) */
 .typography-body,
 .typography-link,
-.typography-person-role,
+.typography-card-description,
 .typography-cta-note {
   font-family: var(--font-secondary);
   line-height: 1.5;
@@ -245,7 +248,7 @@ abbr[title] {
   font-size: var(--text-sm);
 }
 
-.typography-person-role {
+.typography-card-description {
   font-size: var(--text-xs);
 }
 
@@ -266,16 +269,21 @@ abbr[title] {
     font-size: var(--text-3xl-plus);
   }
 
-  .typography-person-name {
+  .typography-card-label {
     font-size: var(--text-base);
   }
 
-  .typography-person-role {
+  .typography-card-description {
     font-size: var(--text-sm);
   }
 }
 
 /* Helper utilities */
+
+/* Keep the hidden attribute working on elements that set their own display */
+[hidden] {
+  display: none !important;
+}
 
 /* Hidden visually, still read by screen readers */
 .sr-only {
@@ -710,7 +718,72 @@ main > .story + .behind-scenes {
 
 .product-toolbar {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.product-toolbar-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+}
+
+.product-count {
+  flex: 1;
+  min-width: 0;
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+}
+
+.product-toolbar select {
+  flex-shrink: 0;
+}
+
+/* Active filter chips */
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-1) var(--spacing-2) var(--spacing-1) var(--spacing-3);
+  background-color: var(--primary-700);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transition: background-color 100ms ease;
+}
+
+.filter-chip:hover {
+  background-color: var(--primary-800);
+}
+
+/* Circled "x" icon, tinted with the chip's text color */
+.filter-chip::after {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round'%3E%3Ccircle cx='8' cy='8' r='6.25'/%3E%3Cpath d='M6 6l4 4M10 6l-4 4'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round'%3E%3Ccircle cx='8' cy='8' r='6.25'/%3E%3Cpath d='M6 6l4 4M10 6l-4 4'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+.product-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  color: var(--muted-foreground);
 }
 
 .product-toolbar select {
@@ -876,9 +949,30 @@ main > .story + .behind-scenes {
   text-align: left;
 }
 
-/* Only flag a field after the user has interacted with it */
-.contact-form :user-invalid {
-  border-color: oklch(55% 0.19 27);
+/* Set by scripts/contact.js once a field fails validation */
+.contact-form [aria-invalid="true"] {
+  border-color: var(--destructive);
+}
+
+.field-error {
+  color: var(--destructive);
+  font-size: var(--text-sm);
+}
+
+.field-error:empty {
+  display: none;
+}
+
+.form-status:not(:empty) {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--secondary-background);
+  border-radius: var(--radius-sm);
+  color: var(--primary-700);
+}
+
+.form-status.is-error {
+  color: var(--destructive);
 }
 
 /* Contact list + hours (contact page and footer) */
@@ -1115,6 +1209,10 @@ main > .story + .behind-scenes {
 
   .product-filters {
     flex: 0 0 13rem;
+  }
+
+  .product-results {
+    flex: 1;
   }
 
   .product-grid {
