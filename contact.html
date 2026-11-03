@@ -23,30 +23,30 @@
         />
       </a>
       <nav class="site-nav" aria-label="Main">
-        <ul>
+        <ul class="typography-link">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
-      <a class="button" href="contact.html">Preorder</a>
+      <a class="button typography-button" href="contact.html">Preorder</a>
     </header>
 
     <main id="main">
       <div class="contact-layout">
         <section class="contact-info" aria-labelledby="contact-heading">
           <header class="section-header">
-            <h1 id="contact-heading">Let’s get in touch</h1>
+            <h1 id="contact-heading" class="typography-h2">Let’s get in touch</h1>
             <p>
               Looking to preorder or have a question? We’d love to hear from
               you! Send us a message, and we’ll get back to you soon.
             </p>
           </header>
 
-          <h2>Location</h2>
+          <h2 class="sr-only">Location</h2>
           <address>
-            <ul class="contact-list">
+            <ul class="contact-list typography-link">
               <li>
                 <img
                   src="assets/svgs/icons/phone.svg"
@@ -79,7 +79,7 @@
             </ul>
           </address>
 
-          <h2>Hours of operation</h2>
+          <h2 class="sr-only">Hours of operation</h2>
           <div class="hours">
             <img
               src="assets/svgs/icons/calendar-days.svg"
@@ -87,8 +87,8 @@
               width="18"
               height="20"
             />
-            <ul>
-              <li>Monday–Friday: 6 a.m. to 8 p.m.</li>
+            <ul class="typography-link">
+              <li>Monday – Friday: 6 a.m. to 8 p.m.</li>
               <li>Saturday: 8 a.m. to 6 p.m.</li>
               <li>Sunday: Closed</li>
             </ul>
@@ -97,46 +97,52 @@
 
         <form class="contact-form" action="#" method="get">
           <fieldset>
-            <legend>Your information</legend>
+            <legend class="sr-only">Your information</legend>
 
-            <label for="full-name"
-              >Full Name <abbr title="required">*</abbr></label
-            >
-            <input
-              type="text"
-              id="full-name"
-              name="full-name"
-              placeholder="John Smith"
-              autocomplete="name"
-              minlength="2"
-              maxlength="80"
-              required
-            />
+            <div class="form-field">
+              <label for="full-name"
+                >Full Name <abbr title="required">*</abbr></label
+              >
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                placeholder="John Smith"
+                autocomplete="name"
+                minlength="2"
+                maxlength="80"
+                required
+              />
+            </div>
 
-            <label for="email">Email <abbr title="required">*</abbr></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="johnsmith@gmail.com"
-              autocomplete="email"
-              required
-            />
+            <div class="form-field">
+              <label for="email">Email <abbr title="required">*</abbr></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="johnsmith@gmail.com"
+                autocomplete="email"
+                required
+              />
+            </div>
           </fieldset>
 
           <fieldset>
-            <legend>Request details</legend>
+            <legend class="sr-only">Request details</legend>
 
-            <label for="request-type"
-              >Request Type <abbr title="required">*</abbr></label
-            >
-            <select id="request-type" name="request-type" required>
-              <option value="">Choose a request type</option>
-              <option value="pre-order">Pre-order</option>
-              <option value="custom-cake">Custom cake or event order</option>
-              <option value="catering">Catering inquiry</option>
-              <option value="general-question">General question</option>
-            </select>
+            <div class="form-field">
+              <label for="request-type"
+                >Request Type <abbr title="required">*</abbr></label
+              >
+              <select id="request-type" name="request-type" required>
+                <option value="">Choose a request type</option>
+                <option value="pre-order">Pre-order</option>
+                <option value="custom-cake">Custom cake or event order</option>
+                <option value="catering">Catering inquiry</option>
+                <option value="general-question">General question</option>
+              </select>
+            </div>
 
             <div class="form-row">
               <div class="form-field">
@@ -160,42 +166,45 @@
                   name="pickup-time"
                   min="06:00"
                   max="20:00"
-                  step="900"
                   required
                 />
               </div>
             </div>
 
-            <label for="allergy-notes">Allergy Notes (optional)</label>
-            <input
-              type="text"
-              id="allergy-notes"
-              name="allergy-notes"
-              placeholder="e.g., Peanuts, soy, etc."
-              maxlength="200"
-            />
+            <div class="form-field">
+              <label for="allergy-notes">Allergy Notes (optional)</label>
+              <input
+                type="text"
+                id="allergy-notes"
+                name="allergy-notes"
+                placeholder="e.g., Peanuts, soy, etc."
+                maxlength="200"
+              />
+            </div>
 
-            <label for="item-details"
-              >Item Details / Message <abbr title="required">*</abbr></label
-            >
-            <textarea
-              id="item-details"
-              name="item-details"
-              rows="7"
-              placeholder="I want to pre-order..."
-              minlength="10"
-              maxlength="1000"
-              required
-            ></textarea>
+            <div class="form-field">
+              <label for="item-details"
+                >Item Details / Message <abbr title="required">*</abbr></label
+              >
+              <textarea
+                id="item-details"
+                name="item-details"
+                rows="7"
+                placeholder="I want to pre-order..."
+                minlength="10"
+                maxlength="1000"
+                required
+              ></textarea>
+            </div>
           </fieldset>
 
-          <button type="submit">Submit</button>
+          <button type="submit" class="button typography-button">Submit</button>
         </form>
       </div>
 
       <section class="newsletter" aria-labelledby="newsletter-heading">
         <header class="section-header">
-          <h2 id="newsletter-heading">From Our Kitchen to Your Inbox</h2>
+          <h2 id="newsletter-heading" class="typography-h2">From Our Kitchen to Your Inbox</h2>
           <p>
             Stay in the loop with us! Subscribe to our newsletter for updates on
             store news, fresh-baked goods, seasonal specials, and what’s
@@ -203,7 +212,7 @@
           </p>
         </header>
         <form class="newsletter-form" action="#" method="get">
-          <label for="newsletter-email">Email address</label>
+          <label for="newsletter-email" class="sr-only">Email address</label>
           <input
             type="email"
             id="newsletter-email"
@@ -212,7 +221,7 @@
             autocomplete="email"
             required
           />
-          <button type="submit">Subscribe</button>
+          <button type="submit" class="button typography-button">Subscribe</button>
         </form>
       </section>
     </main>
@@ -263,7 +272,7 @@
       <section class="footer-contact" aria-labelledby="footer-contact-heading">
         <h2 id="footer-contact-heading">Get in touch</h2>
         <address>
-          <ul class="contact-list">
+          <ul class="contact-list typography-link">
             <li>
               <img
                 src="assets/svgs/icons/phone.svg"
@@ -302,8 +311,8 @@
             width="18"
             height="20"
           />
-          <ul>
-            <li>Monday–Friday: 6 a.m. to 8 p.m.</li>
+          <ul class="typography-link">
+            <li>Monday – Friday: 6 a.m. to 8 p.m.</li>
             <li>Saturday: 8 a.m. to 6 p.m.</li>
             <li>Sunday: Closed</li>
           </ul>
@@ -312,7 +321,7 @@
 
       <nav class="footer-nav" aria-labelledby="footer-links-heading">
         <h2 id="footer-links-heading">Quick links</h2>
-        <ul>
+        <ul class="typography-link">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
@@ -322,7 +331,7 @@
 
       <nav class="footer-nav" aria-labelledby="footer-info-heading">
         <h2 id="footer-info-heading">Information</h2>
-        <ul>
+        <ul class="typography-link">
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms of Service</a></li>
           <li><a href="#">FAQ</a></li>
@@ -330,8 +339,8 @@
       </nav>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
-        <p>Made with love and a lot of flour!</p>
+        <p class="typography-legal">&copy; 2026 North Star Bakery. All rights reserved.</p>
+        <p class="typography-legal">Made with love and a lot of flour!</p>
       </div>
     </footer>
   </body>

@@ -23,14 +23,14 @@
         />
       </a>
       <nav class="site-nav" aria-label="Main">
-        <ul>
+        <ul class="typography-link">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="products.html" aria-current="page">Products</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <a class="button" href="contact.html">Preorder</a>
+      <a class="button typography-button" href="contact.html">Preorder</a>
     </header>
 
     <main id="main">
@@ -50,13 +50,15 @@
           />
         </picture>
         <div class="hero-content">
-          <h1>North Star Bakery Products</h1>
+          <h1 class="typography-h1">North Star Bakery Products</h1>
           <p>
             Breads, pastries, and cakes baked by hand every morning. Pick your
             favorites, pre-order online, and we’ll have them ready for you.
           </p>
-          <a class="button" href="#products-heading">Browse Products</a>
-          <p class="hero-note">
+          <a class="button typography-button" href="#products-heading"
+            >Browse Products</a
+          >
+          <p class="hero-note typography-cta-note">
             No checkout required. Pay in person at pickup.
           </p>
         </div>
@@ -64,7 +66,7 @@
 
       <section class="products" aria-labelledby="products-heading">
         <header class="section-header">
-          <h2 id="products-heading">Our Products</h2>
+          <h2 id="products-heading" class="typography-h2">Our Products</h2>
           <p>
             Prices are shown as ranges because most items come in more than one
             size. Final pricing is confirmed when you pick up your order.
@@ -75,64 +77,62 @@
           <aside class="product-filters" aria-labelledby="filters-heading">
             <form action="#" method="get">
               <div class="filters-header">
-                <h3 id="filters-heading">Filter By</h3>
+                <h3 id="filters-heading" class="typography-h3">Filter By</h3>
                 <button type="reset">Clear all</button>
               </div>
 
               <details open>
                 <summary>Category</summary>
                 <fieldset>
-                  <legend>Category</legend>
-                  <label
-                    ><input type="checkbox" name="category" value="breads" />
-                    Breads</label
-                  >
-                  <label
-                    ><input type="checkbox" name="category" value="pastries" />
-                    Pastries</label
-                  >
-                  <label
-                    ><input type="checkbox" name="category" value="cakes" />
-                    Cakes</label
-                  >
+                  <legend class="sr-only">Category</legend>
+                  <label>
+                    Breads
+                    <input type="checkbox" name="category" value="breads"
+                  /></label>
+                  <label>
+                    Pastries
+                    <input type="checkbox" name="category" value="pastries" />
+                  </label>
+                  <label>
+                    Cakes
+                    <input type="checkbox" name="category" value="cakes" />
+                  </label>
                 </fieldset>
               </details>
 
               <details>
                 <summary>Price</summary>
                 <fieldset>
-                  <legend>Price</legend>
-                  <label
-                    ><input type="checkbox" name="price" value="under-10" />
-                    Under $10</label
-                  >
-                  <label
-                    ><input type="checkbox" name="price" value="10-40" /> $10 –
-                    $40</label
-                  >
-                  <label
-                    ><input type="checkbox" name="price" value="over-40" /> Over
-                    $40</label
-                  >
+                  <legend class="sr-only">Price</legend>
+                  <label>
+                    Under $10
+                    <input type="checkbox" name="price" value="under-10" />
+                  </label>
+                  <label>
+                    $10 – $40 <input type="checkbox" name="price" value="10-40"
+                  /></label>
+                  <label>
+                    Over $40
+                    <input type="checkbox" name="price" value="over-40"
+                  /></label>
                 </fieldset>
               </details>
 
               <details>
                 <summary>Dietary</summary>
                 <fieldset>
-                  <legend>Dietary</legend>
-                  <label
-                    ><input type="checkbox" name="dietary" value="vegan" />
-                    Vegan</label
-                  >
-                  <label
-                    ><input type="checkbox" name="dietary" value="nut-free" />
-                    Nut-free</label
-                  >
-                  <label
-                    ><input type="checkbox" name="dietary" value="dairy-free" />
-                    Dairy-free</label
-                  >
+                  <legend class="sr-only">Dietary</legend>
+                  <label>
+                    Vegan <input type="checkbox" name="dietary" value="vegan" />
+                  </label>
+                  <label>
+                    Nut-free
+                    <input type="checkbox" name="dietary" value="nut-free" />
+                  </label>
+                  <label>
+                    Dairy-free
+                    <input type="checkbox" name="dietary" value="dairy-free" />
+                  </label>
                 </fieldset>
               </details>
             </form>
@@ -140,7 +140,7 @@
 
           <div class="product-results">
             <div class="product-toolbar">
-              <label for="sort-by">Sort by</label>
+              <label for="sort-by" class="sr-only">Sort by</label>
               <select id="sort-by" name="sort-by">
                 <option value="best-sellers">Best Sellers</option>
                 <option value="price-low-high">Price: Low to High</option>
@@ -150,7 +150,7 @@
             </div>
 
             <section class="product-category" aria-labelledby="breads-heading">
-              <h3 id="breads-heading">Breads</h3>
+              <h3 id="breads-heading" class="typography-h3">Breads</h3>
               <ul class="product-grid">
                 <li class="product-card">
                   <img
@@ -159,9 +159,9 @@
                     width="1200"
                     height="1200"
                   />
-                  <h4>Rustic Sourdough</h4>
-                  <p class="price">$9 – $12</p>
-                  <p>
+                  <h4 class="typography-person-name">Rustic Sourdough</h4>
+                  <p class="price typography-person-name">$9 – $12</p>
+                  <p class="typography-person-role">
                     Our signature loaf with a crackly crust and tangy, open
                     crumb.
                   </p>
@@ -173,9 +173,11 @@
                     width="1200"
                     height="1200"
                   />
-                  <h4>Country White</h4>
-                  <p class="price">$7 – $9</p>
-                  <p>A soft, everyday loaf made for sandwiches and toast.</p>
+                  <h4 class="typography-person-name">Country White</h4>
+                  <p class="price typography-person-name">$7 – $9</p>
+                  <p class="typography-person-role">
+                    A soft, everyday loaf made for sandwiches and toast.
+                  </p>
                 </li>
                 <li class="product-card">
                   <img
@@ -184,9 +186,9 @@
                     width="600"
                     height="600"
                   />
-                  <h4>Seeded Multigrain</h4>
-                  <p class="price">$8 – $10</p>
-                  <p>
+                  <h4 class="typography-person-name">Seeded Multigrain</h4>
+                  <p class="price typography-person-name">$8 – $10</p>
+                  <p class="typography-person-role">
                     Packed with oats, flax, and sunflower seeds for a hearty
                     bite.
                   </p>
@@ -198,9 +200,9 @@
                     width="600"
                     height="600"
                   />
-                  <h4>Rosemary Focaccia</h4>
-                  <p class="price">$6 – $10</p>
-                  <p>
+                  <h4 class="typography-person-name">Rosemary Focaccia</h4>
+                  <p class="price typography-person-name">$6 – $10</p>
+                  <p class="typography-person-role">
                     Olive oil–rich and dimpled, topped with fresh rosemary and
                     sea salt.
                   </p>
@@ -212,7 +214,7 @@
               class="product-category"
               aria-labelledby="pastries-heading"
             >
-              <h3 id="pastries-heading">Pastries</h3>
+              <h3 id="pastries-heading" class="typography-h3">Pastries</h3>
               <ul class="product-grid">
                 <li class="product-card">
                   <img
@@ -221,9 +223,9 @@
                     width="600"
                     height="600"
                   />
-                  <h4>Butter Croissant</h4>
-                  <p class="price">$4 – $5</p>
-                  <p>
+                  <h4 class="typography-person-name">Butter Croissant</h4>
+                  <p class="price typography-person-name">$4 – $5</p>
+                  <p class="typography-person-role">
                     Flaky, golden layers made with real butter from a local
                     dairy.
                   </p>
@@ -235,9 +237,9 @@
                     width="600"
                     height="600"
                   />
-                  <h4>Cinnamon Roll</h4>
-                  <p class="price">$4 – $6</p>
-                  <p>
+                  <h4 class="typography-person-name">Cinnamon Roll</h4>
+                  <p class="price typography-person-name">$4 – $6</p>
+                  <p class="typography-person-role">
                     Soft, swirled, and finished with a generous cream cheese
                     glaze.
                   </p>
@@ -249,9 +251,9 @@
                     width="600"
                     height="600"
                   />
-                  <h4>Seasonal Fruit Danish</h4>
-                  <p class="price">$5 – $6</p>
-                  <p>
+                  <h4 class="typography-person-name">Seasonal Fruit Danish</h4>
+                  <p class="price typography-person-name">$5 – $6</p>
+                  <p class="typography-person-role">
                     Buttery pastry filled with whatever fruit is fresh this
                     week.
                   </p>
@@ -263,9 +265,9 @@
                     width="1200"
                     height="1200"
                   />
-                  <h4>Cookie Box</h4>
-                  <p class="price">$12 – $24</p>
-                  <p>
+                  <h4 class="typography-person-name">Cookie Box</h4>
+                  <p class="price typography-person-name">$12 – $24</p>
+                  <p class="typography-person-role">
                     A half or full dozen of our chocolate chip, oatmeal, and
                     sugar cookies.
                   </p>
@@ -274,7 +276,7 @@
             </section>
 
             <section class="product-category" aria-labelledby="cakes-heading">
-              <h3 id="cakes-heading">Cakes</h3>
+              <h3 id="cakes-heading" class="typography-h3">Cakes</h3>
               <ul class="product-grid">
                 <li class="product-card">
                   <img
@@ -283,9 +285,9 @@
                     width="600"
                     height="600"
                   />
-                  <h4>Celebration Layer Cake</h4>
-                  <p class="price">$35 – $65</p>
-                  <p>
+                  <h4 class="typography-person-name">Celebration Layer Cake</h4>
+                  <p class="price typography-person-name">$35 – $65</p>
+                  <p class="typography-person-role">
                     Vanilla or chocolate layers in 6", 8", or 10" sizes for any
                     occasion.
                   </p>
@@ -297,9 +299,9 @@
                     width="600"
                     height="600"
                   />
-                  <h4>Carrot Cake</h4>
-                  <p class="price">$30 – $55</p>
-                  <p>
+                  <h4 class="typography-person-name">Carrot Cake</h4>
+                  <p class="price typography-person-name">$30 – $55</p>
+                  <p class="typography-person-role">
                     Spiced and moist with walnuts and cream cheese frosting.
                   </p>
                 </li>
@@ -310,9 +312,9 @@
                     width="600"
                     height="600"
                   />
-                  <h4>Cupcakes</h4>
-                  <p class="price">$18 – $36</p>
-                  <p>
+                  <h4 class="typography-person-name">Cupcakes</h4>
+                  <p class="price typography-person-name">$18 – $36</p>
+                  <p class="typography-person-role">
                     Half or full dozen in rotating flavors. Great for parties
                     and offices.
                   </p>
@@ -324,9 +326,9 @@
                     width="600"
                     height="600"
                   />
-                  <h4>Custom Event Cakes</h4>
-                  <p class="price">From $150</p>
-                  <p>
+                  <h4 class="typography-person-name">Custom Event Cakes</h4>
+                  <p class="price typography-person-name">From $150</p>
+                  <p class="typography-person-role">
                     Weddings, showers, and big celebrations.
                     <a href="contact.html">Send us an inquiry</a> to start
                     planning.
@@ -340,7 +342,9 @@
 
       <section class="newsletter" aria-labelledby="newsletter-heading">
         <header class="section-header">
-          <h2 id="newsletter-heading">From Our Kitchen to Your Inbox</h2>
+          <h2 id="newsletter-heading" class="typography-h2">
+            From Our Kitchen to Your Inbox
+          </h2>
           <p>
             Stay in the loop with us! Subscribe to our newsletter for updates on
             store news, fresh-baked goods, seasonal specials, and what’s
@@ -348,7 +352,7 @@
           </p>
         </header>
         <form class="newsletter-form" action="#" method="get">
-          <label for="newsletter-email">Email address</label>
+          <label for="newsletter-email" class="sr-only">Email address</label>
           <input
             type="email"
             id="newsletter-email"
@@ -357,7 +361,9 @@
             autocomplete="email"
             required
           />
-          <button type="submit">Subscribe</button>
+          <button type="submit" class="button typography-button">
+            Subscribe
+          </button>
         </form>
       </section>
     </main>
@@ -408,7 +414,7 @@
       <section class="footer-contact" aria-labelledby="footer-contact-heading">
         <h2 id="footer-contact-heading">Get in touch</h2>
         <address>
-          <ul class="contact-list">
+          <ul class="contact-list typography-link">
             <li>
               <img
                 src="assets/svgs/icons/phone.svg"
@@ -447,8 +453,8 @@
             width="18"
             height="20"
           />
-          <ul>
-            <li>Monday–Friday: 6 a.m. to 8 p.m.</li>
+          <ul class="typography-link">
+            <li>Monday – Friday: 6 a.m. to 8 p.m.</li>
             <li>Saturday: 8 a.m. to 6 p.m.</li>
             <li>Sunday: Closed</li>
           </ul>
@@ -457,7 +463,7 @@
 
       <nav class="footer-nav" aria-labelledby="footer-links-heading">
         <h2 id="footer-links-heading">Quick links</h2>
-        <ul>
+        <ul class="typography-link">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
@@ -467,7 +473,7 @@
 
       <nav class="footer-nav" aria-labelledby="footer-info-heading">
         <h2 id="footer-info-heading">Information</h2>
-        <ul>
+        <ul class="typography-link">
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms of Service</a></li>
           <li><a href="#">FAQ</a></li>
@@ -475,8 +481,10 @@
       </nav>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
-        <p>Made with love and a lot of flour!</p>
+        <p class="typography-legal">
+          &copy; 2026 North Star Bakery. All rights reserved.
+        </p>
+        <p class="typography-legal">Made with love and a lot of flour!</p>
       </div>
     </footer>
   </body>
